@@ -42,9 +42,19 @@ function populateInvitation() {
   if (mapButton && invitation.mapUrl) mapButton.href = invitation.mapUrl;
 
   const whatsappButton = $("#whatsapp-button");
-  if (whatsappButton && invitation.whatsappNumber) {
-    const whatsappText = encodeURIComponent(invitation.whatsappMessage || "");
-    whatsappButton.href = `https://wa.me/${invitation.whatsappNumber}?text=${whatsappText}`;
+  if (whatsappButton) {
+    if (invitation.whatsappNumber) {
+      const whatsappText = encodeURIComponent(invitation.whatsappMessage || "");
+      whatsappButton.href = `https://wa.me/${invitation.whatsappNumber}?text=${whatsappText}`;
+      whatsappButton.target = "_blank";
+      whatsappButton.rel = "noopener noreferrer";
+      whatsappButton.removeAttribute("aria-disabled");
+    } else {
+      whatsappButton.removeAttribute("href");
+      whatsappButton.removeAttribute("target");
+      whatsappButton.removeAttribute("rel");
+      whatsappButton.setAttribute("aria-disabled", "true");
+    }
   }
 
   const instagramLink = $("#instagram-link");
