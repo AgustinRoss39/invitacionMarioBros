@@ -11,7 +11,7 @@ window.INVITATION_CONFIG = {
     address: "Gral. Pedro Díaz 1800, Hurlingham",
     mapUrl: "https://maps.app.goo.gl/LnZVf7kF9egGp7Lk8",
     extraMessage: "Si te copás, podés venir al cumple disfrazado 😁",
-    whatsappNumber: "5491156223007",
+    whatsappNumber: "",
     whatsappMessage: "¡Hola! Confirmo mi asistencia al cumpleaños de Samuel. 🍄⭐",
     instagramUrl: "https://www.instagram.com/rossdigitalstudio/",
     instagramHandle: "@rossdigitalstudio"
